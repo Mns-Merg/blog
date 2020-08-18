@@ -10,7 +10,12 @@
     <h1>Create Post</h1>
 
     {{-- <form method="post" action="/posts"> --}}
-        {!! Form::open(['method'=>'POST', 'action'=>'PostsController@store']) !!}
+        {!! Form::open(['method'=>'POST', 'action'=>'PostsController@store', 'files'=>true]) !!}
+
+        
+        {!! Form::file('file', null, ['class'=>'form-control'])!!}
+
+
 
         <div class="form-group">
             {!! Form::label('title', 'Title') !!}
